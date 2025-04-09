@@ -18,14 +18,18 @@
 
 var config = {
     type: Phaser.AUTO,
-    width: 800,
-    height: 600,
+    width: window.innerWidth,
+    height: window.innerHeight,
     physics: {
         default: 'arcade',
         arcade: {
             gravity: { y: 300 },
             debug: false
         }
+    },
+    scale: {
+        mode: Phaser.Scale.FIT,
+        autoCenter: Phaser.Scale.CENTER_BOTH
     },
     scene: {
         preload: preload,
@@ -331,6 +335,6 @@ function hitBomb (player, bomb)
 
 </body>
 <div style="position: absolute; top: 10px; right: 10px; background-color: #ff9900; color: white; padding: 5px 10px; z-index: 1000; font-family: Arial; border-radius: 5px;">
-    Version 1.0.2 - Updated via Webhook
+    Version 1.0.2 - Updated via Github's Webhook
 </div>
 </html>
